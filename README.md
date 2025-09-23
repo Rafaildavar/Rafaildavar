@@ -303,8 +303,6 @@
 
 [![CodeWars](https://www.codewars.com/users/remi_hr/badges/large)](https://www.codewars.com/users/remi_hr)
 
-![CodeWars Stats](https://github-readme-stats.vercel.app/api?username=remi_hr&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true&custom_title=CodeWars%20Statistics)
-
 </div>
 
 **📈 Автоматически обновляемая статистика:**
