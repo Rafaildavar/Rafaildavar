@@ -1,7 +1,7 @@
 # Привет! 👋 Меня зовут **Рафаил Давар**
 
 <div align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2F81F7&center=true&vCenter=true&width=435&lines= Студент+4+курса+%22Прикладная+информатика%22;Разработчик+Python+%2F+C%2B%2B+%2F+C%23;Специалист+по+Data+Science+%26+ML;Ищу+работу+в+IT+сфере" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=2F81F7&center=true&vCenter=true&width=435&lines=Студент+4+курса+%22Прикладная+информатика%22;Разработчик+Python+%2F+C%2B%2B+%2F+C%23;Специалист+по+Data+Science+%26+ML;Ищу+работу+в+IT+сфере" alt="Typing SVG" />
 </div>
 
 <div align="center">
