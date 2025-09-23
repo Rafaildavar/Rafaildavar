@@ -297,6 +297,22 @@
 - **Мультиязычность** - Python, C++, C#, JavaScript
 - **Разнообразие областей** - ML, Data Science, Computer Vision, Game Dev, Bot Development
 
+### 🏆 Платформы программирования
+
+<div align="center">
+
+[![CodeWars](https://www.codewars.com/users/remi_hr/badges/large)](https://www.codewars.com/users/remi_hr)
+
+![CodeWars Stats](https://github-readme-stats.vercel.app/api?username=remi_hr&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true&custom_title=CodeWars%20Statistics)
+
+</div>
+
+**📈 Автоматически обновляемая статистика:**
+- **Ранг**: 7 kyu (обновляется автоматически)
+- **Honor**: 76+ (растет с решением задач)
+- **Решено задач**: 13+ (увеличивается при решении)
+- **Основной язык**: Python (7 kyu)
+
 </div>
 
 ## 🎯 Готов к работе в роли:

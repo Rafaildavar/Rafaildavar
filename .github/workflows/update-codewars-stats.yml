@@ -1,0 +1,107 @@
+name: Update CodeWars Stats
+
+on:
+  schedule:
+    # Запуск каждый день в 00:00 UTC (3:00 по московскому времени)
+    - cron: '0 0 * * *'
+  workflow_dispatch: # Позволяет запускать вручную
+  push:
+    branches: [ main ]
+
+jobs:
+  update-codewars-stats:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    
+    - name: Install dependencies
+      run: |
+        pip install requests beautifulsoup4
+    
+    - name: Update CodeWars stats
+      run: |
+        python << 'EOF'
+        import requests
+        from bs4 import BeautifulSoup
+        import re
+        import os
+        
+        # Получаем данные с CodeWars
+        username = "remi_hr"
+        url = f"https://www.codewars.com/users/{username}"
+        
+        try:
+            response = requests.get(url)
+            response.raise_for_status()
+            soup = BeautifulSoup(response.content, 'html.parser')
+            
+            # Извлекаем статистику
+            rank_element = soup.find('div', class_='stat')
+            honor_element = soup.find('div', class_='stat')
+            completed_element = soup.find('div', class_='stat')
+            
+            # Ищем данные в тексте страницы
+            page_text = response.text
+            
+            # Извлекаем ранг
+            rank_match = re.search(r'Rank.*?(\d+)\s*kyu', page_text)
+            rank = rank_match.group(1) if rank_match else "7"
+            
+            # Извлекаем honor
+            honor_match = re.search(r'Honor.*?(\d+)', page_text)
+            honor = honor_match.group(1) if honor_match else "76"
+            
+            # Извлекаем количество решенных задач
+            completed_match = re.search(r'Total Completed Kata.*?(\d+)', page_text)
+            completed = completed_match.group(1) if completed_match else "13"
+            
+            # Читаем README
+            with open('README.md', 'r', encoding='utf-8') as f:
+                readme_content = f.read()
+            
+            # Обновляем статистику в README
+            updated_content = re.sub(
+                r'(\*\*Ранг\*\*: )\d+ kyu',
+                f'\\g<1>{rank} kyu',
+                readme_content
+            )
+            
+            updated_content = re.sub(
+                r'(\*\*Honor\*\*: )\d+',
+                f'\\g<1>{honor}',
+                updated_content
+            )
+            
+            updated_content = re.sub(
+                r'(\*\*Решено задач\*\*: )\d+',
+                f'\\g<1>{completed}',
+                updated_content
+            )
+            
+            # Записываем обновленный README
+            with open('README.md', 'w', encoding='utf-8') as f:
+                f.write(updated_content)
+            
+            print(f"Updated CodeWars stats: Rank {rank} kyu, Honor {honor}, Completed {completed}")
+            
+        except Exception as e:
+            print(f"Error updating CodeWars stats: {e}")
+            exit(1)
+        EOF
+    
+    - name: Commit and push changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git diff --staged --quiet || git commit -m "🤖 Auto-update CodeWars stats [skip ci]"
+        git push
