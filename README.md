@@ -18,6 +18,18 @@
 | [AtomicHack-Log-Monitor](https://github.com/Rafaildavar/AtomicHack-Log-Monitor) | Анализ логов и realtime-мониторинг с ML-детекцией аномалий | FastAPI, React, WebSocket, ML |
 | [GoldenRecord](https://github.com/Rafaildavar/GoldenRecord) | Поиск «золотой записи» и дедупликация в больших наборах данных | Python, Pandas, NumPy |
 
+## Хакатоны
+
+| Хакатон | Репозиторий | Кратко о решении |
+|---|---|---|
+| Альфа Банк x ИТМО | [RealTimePIIAnonymizer](https://github.com/Rafaildavar/RealTimePIIAnonymizer) | Анонимизация PII в пользовательских запросах для безопасной работы AI-ассистентов |
+| Хакатон Сбера | [hackathon_sber_SpbTechRun](https://github.com/Rafaildavar/hackathon_sber_SpbTechRun) | AI-агент «Городской советник» для ответов на городские вопросы на базе LLM |
+| Хакатон инженерной школы ГУАП | [hackathon_IngSuai](https://github.com/Rafaildavar/hackathon_IngSuai) | Обработка документов и автоматизация извлечения полезной информации |
+| Хакатон университета Дизайна | [hack_design](https://github.com/Rafaildavar/hack_design) | Прототип решения на базе prompt engineering и AI-инструментов |
+| Хакатон Baggins Coffee | [baggins_coffee_price_trends](https://github.com/Rafaildavar/baggins_coffee_price_trends) | Анализ заказов, выявление трендов и сегментация клиентов под предложения |
+| Хакатон РосАтом | [AtomicHack-Log-Monitor](https://github.com/Rafaildavar/AtomicHack-Log-Monitor) | Анализ логов с realtime-мониторингом и ML-детекцией аномалий |
+| Хакатон Норберт | [GoldenRecord](https://github.com/Rafaildavar/GoldenRecord) | Поиск «золотой записи» в наборах данных с дубликатами и похожими записями |
+
 ## Технологии
 `Python` `FastAPI` `LangGraph` `RAG` `OpenCV` `MediaPipe` `Pandas` `scikit-learn` `PostgreSQL` `Docker`
 
