@@ -34,7 +34,7 @@
 `Python` `FastAPI` `LangGraph` `RAG` `OpenCV` `MediaPipe` `Pandas` `scikit-learn` `PostgreSQL` `Docker`
 
 ## Ищу возможности
-Интересны роли: `Junior Python Developer` / `ML Engineer Intern` / `AI Engineer Intern`.
+Интересны роли: `Middle ML Engineer` / `DS Engineer` / `NLP`.
 Открыт к удаленной работе и проектам в Санкт-Петербурге.
 
 ## Контакты
